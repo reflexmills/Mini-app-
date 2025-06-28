@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Кастомный шрифт для «взрывного» вида -->
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+
+  <!--  Если нужен собственный аним-фон, подключите здесь -->
+  <!--  <link rel="stylesheet" href="animated-background.css" /> -->
+
+  <style>
+    :root {
+      --glow: 0 0 12px #fff, 0 0 24px #ff1df0, 0 0 36px #ff1df0;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      background: #000;          /* fallback, замените/уберите при своём фоне */
+      color: #fff;
+      font-family: 'Russo One', sans-serif;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .bio-card {
+      text-shadow: var(--glow);
+      animation: fadeIn 1.2s ease both;
+    }
+
+    .bio-card h1 {
+      font-size: 2.25rem;
+      margin: 0 0 1rem;
+      letter-spacing: 1px;
+    }
+
+    .bio-card p {
+      margin: .25rem 0;
+      font-size: 1.15rem;
+      letter-spacing: .5px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(.95); }
+      to   { opacity: 1; transform: scale(1);  }
+    }
+  </style>
+</head>
+<body>
+  <div class="bio-card">
+    <h1>My bio 🤩</h1>
+
+    <p>👁 name: Pablo 👁</p>
+    <p>🇷🇺 Location: Russia 🇷🇺</p>
+    <p>👋 years: 15 👋</p>
+    <p>😈 юz: @kirrr5 😈</p>
+
+    <p style="margin-top:1rem;">
+      никогда не нарушал закон РФ,<br />
+      законопослушный гражданин&nbsp;РФ&nbsp;🇷🇺
+    </p>
+
+    <p style="margin-top:1rem;">bb 😈</p>
+  </div>
+</body>
+</html>
