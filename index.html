@@ -5,28 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pablo Bio</title>
 
-  <!-- Google Fonts: Montserrat и Roboto Mono -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto+Mono&display=swap" rel="stylesheet" />
 
   <style>
-    /* Цвета */
     :root {
       --neon-pink: #ff1df0;
       --neon-blue: #2af2ff;
-      --neon-white: #fff;
-      --bg-shadow: 0 0 20px var(--neon-pink), 0 0 40px var(--neon-pink);
+      --white: #fff;
+      --bg-shadow: 0 0 20px rgba(255, 29, 240, 0.8), 0 0 40px rgba(255, 29, 240, 0.6);
     }
 
-    /* Общие сбросы */
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      margin: 0; padding: 0; box-sizing: border-box;
     }
 
     body {
       font-family: 'Montserrat', sans-serif;
-      color: var(--neon-white);
+      color: var(--white);
       background: #000;
       overflow: hidden;
       height: 100vh;
@@ -37,19 +32,16 @@
       padding: 2rem;
     }
 
-    /* Видео-фон */
     #bg-video {
       position: fixed;
       top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
+      width: 100vw; height: 100vh;
       object-fit: cover;
       z-index: -1;
       filter: brightness(0.4) saturate(1.2);
       pointer-events: none;
     }
 
-    /* Контейнер с био */
     .bio-card {
       max-width: 420px;
       background: rgba(0,0,0,0.5);
@@ -62,32 +54,28 @@
       animation: fadeIn 1.3s ease forwards;
     }
 
-    /* Заголовок */
     .bio-card h1 {
       font-weight: 600;
       font-size: 2.8rem;
       margin-bottom: 1.2rem;
       letter-spacing: 2px;
-      color: var(--neon-pink);
-      text-shadow:
-        0 0 8px var(--neon-pink),
-        0 0 20px var(--neon-pink);
+      color: var(--white);
+      text-shadow: none;
     }
 
-    /* Пункты */
     .bio-card p {
       font-family: 'Roboto Mono', monospace;
       font-size: 1.2rem;
       margin: 0.6rem 0;
       letter-spacing: 1.1px;
+      color: var(--white);
       text-shadow:
-        0 0 5px var(--neon-blue),
-        0 0 15px var(--neon-blue);
-      color: var(--neon-white);
+        0 0 6px var(--neon-pink),
+        0 0 16px var(--neon-pink),
+        0 0 26px var(--neon-blue);
       line-height: 1.3;
     }
 
-    /* Особый абзац - легальный */
     .legal {
       margin-top: 1.3rem;
       font-style: italic;
@@ -98,7 +86,6 @@
       line-height: 1.4;
     }
 
-    /* Последняя фраза */
     .bye {
       margin-top: 1.6rem;
       font-weight: 700;
@@ -120,7 +107,6 @@
       }
     }
 
-    /* Адаптив */
     @media (max-width: 450px) {
       .bio-card {
         max-width: 90vw;
@@ -144,7 +130,7 @@
   </video>
 
   <div class="bio-card">
-    <h1>My bio </h1>
+    <h1>My bio 🤩</h1>
     <p>👁 name: Pablo 👁</p>
     <p>🇷🇺 Location: Russia 🇷🇺</p>
     <p>👋 years: 15 👋</p>
