@@ -1,51 +1,65 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pablo Bio</title>
 
-  <!-- Кастомный шрифт для «взрывного» вида -->
-  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
-
-  <!--  Если нужен собственный аним-фон, подключите здесь -->
-  <!--  <link rel="stylesheet" href="animated-background.css" /> -->
+  <!-- Шрифт -->
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --glow: 0 0 12px #fff, 0 0 24px #ff1df0, 0 0 36px #ff1df0;
     }
 
-    * { box-sizing: border-box; }
-
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1.5rem;
-      background: #000;          /* fallback, замените/уберите при своём фоне */
-      color: #fff;
-      font-family: 'Russo One', sans-serif;
-      line-height: 1.4;
-      text-align: center;
+      padding: 0;
     }
 
+    body {
+      font-family: 'Russo One', sans-serif;
+      color: #fff;
+      overflow: hidden;          /* убираем прокрутку — фон на весь экран */
+    }
+
+    /* Видео-фон */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      pointer-events: none;      /* клики идут сквозь видео */
+    }
+
+    /* Карточка био */
     .bio-card {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
       text-shadow: var(--glow);
       animation: fadeIn 1.2s ease both;
+      padding: 1.5rem;
     }
 
     .bio-card h1 {
-      font-size: 2.25rem;
-      margin: 0 0 1rem;
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
       letter-spacing: 1px;
     }
 
     .bio-card p {
-      margin: .25rem 0;
-      font-size: 1.15rem;
-      letter-spacing: .5px;
+      font-size: 1.2rem;
+      margin: 0.35rem 0;
+      letter-spacing: 0.5px;
     }
 
     @keyframes fadeIn {
@@ -54,7 +68,14 @@
     }
   </style>
 </head>
+
 <body>
+  <!-- Видео-фон -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="background.mp4" type="video/mp4">
+  </video>
+
+  <!-- Содержимое -->
   <div class="bio-card">
     <h1>My bio 🤩</h1>
 
@@ -63,12 +84,12 @@
     <p>👋 years: 15 👋</p>
     <p>😈 юz: @kirrr5 😈</p>
 
-    <p style="margin-top:1rem;">
-      никогда не нарушал закон РФ,<br />
-      законопослушный гражданин&nbsp;РФ&nbsp;🇷🇺
+    <p style="margin-top: 1rem;">
+      никогда не нарушал закон РФ,<br>
+      законопослушный гражданин РФ 🇷🇺
     </p>
 
-    <p style="margin-top:1rem;">bb 😈</p>
+    <p style="margin-top: 1rem;">bb 😈</p>
   </div>
 </body>
 </html>
