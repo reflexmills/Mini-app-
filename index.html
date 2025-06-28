@@ -8,28 +8,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto+Mono&display=swap" rel="stylesheet" />
 
   <style>
-    :root {
-      --neon-pink: #ff1df0;
-      --neon-blue: #2af2ff;
-      --white: #fff;
-      --bg-shadow: 0 0 20px rgba(255, 29, 240, 0.8), 0 0 40px rgba(255, 29, 240, 0.6);
-    }
-
     * {
       margin: 0; padding: 0; box-sizing: border-box;
     }
 
     body {
       font-family: 'Montserrat', sans-serif;
-      color: var(--white);
+      color: #fff;
       background: #000;
       overflow: hidden;
       height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
+      position: relative;
     }
 
     #bg-video {
@@ -43,82 +32,50 @@
     }
 
     .bio-card {
-      max-width: 420px;
-      background: rgba(0,0,0,0.5);
-      border-radius: 18px;
-      padding: 2.5rem 2rem;
-      box-shadow: var(--bg-shadow);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      position: fixed;
+      top: 15px;  /* сверху, немного отступ */
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 400px;
+      background: rgba(0,0,0,0.6);
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      text-align: center;
       user-select: none;
-      animation: fadeIn 1.3s ease forwards;
+      font-family: 'Roboto Mono', monospace;
+      line-height: 1.3;
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #fff;
+      box-shadow: 0 0 10px rgba(255,255,255,0.3);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 10;
     }
 
     .bio-card h1 {
-      font-weight: 600;
-      font-size: 2.8rem;
-      margin-bottom: 1.2rem;
-      letter-spacing: 2px;
-      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 0.8rem;
+      color: #fff;
       text-shadow: none;
     }
 
     .bio-card p {
-      font-family: 'Roboto Mono', monospace;
-      font-size: 1.2rem;
-      margin: 0.6rem 0;
-      letter-spacing: 1.1px;
-      color: var(--white);
-      text-shadow:
-        0 0 6px var(--neon-pink),
-        0 0 16px var(--neon-pink),
-        0 0 26px var(--neon-blue);
-      line-height: 1.3;
-    }
-
-    .legal {
-      margin-top: 1.3rem;
-      font-style: italic;
-      font-size: 1rem;
-      color: #aaa;
+      margin: 0.35rem 0;
+      color: #fff;
       text-shadow: none;
-      letter-spacing: 0.9px;
-      line-height: 1.4;
-    }
-
-    .bye {
-      margin-top: 1.6rem;
-      font-weight: 700;
-      font-size: 1.4rem;
-      color: var(--neon-pink);
-      text-shadow:
-        0 0 8px var(--neon-pink),
-        0 0 22px var(--neon-pink);
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(15px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     @media (max-width: 450px) {
       .bio-card {
         max-width: 90vw;
-        padding: 1.8rem 1.5rem;
-      }
-
-      .bio-card h1 {
-        font-size: 2.2rem;
-      }
-
-      .bio-card p {
         font-size: 1rem;
+        padding: 0.8rem 1rem;
+      }
+      .bio-card h1 {
+        font-size: 1.4rem;
       }
     }
   </style>
@@ -135,11 +92,11 @@
     <p>🇷🇺 Location: Russia 🇷🇺</p>
     <p>👋 years: 15 👋</p>
     <p>😈 юz: @kirrr5 😈</p>
-    <p class="legal">
+    <p style="margin-top: 0.8rem; font-style: italic; font-weight: 400; font-size: 0.95rem;">
       никогда не нарушал закон РФ,<br />
       законопослушный гражданин РФ 🇷🇺
     </p>
-    <p class="bye">bb 😈</p>
+    <p style="margin-top: 1rem; font-weight: 700; font-size: 1.2rem;">bb 😈</p>
   </div>
 </body>
 </html>
